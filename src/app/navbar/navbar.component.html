@@ -1,0 +1,18 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand" routerLink="singin" >
+      <i class="far fa-sticky-note pe-2"></i>Notes</a>
+    <div id="navbarNavDropdown">
+      <ul class="navbar-nav ms-auto ">
+        <li class="nav-item">
+        </li>
+            <li *ngIf="islogin"><a class="navbar-brand" routerLink="singin">SingIn</a></li>
+            <li *ngIf="islogin"><a class="navbar-brand" routerLink="singup">SingUp</a></li>
+            <li *ngIf="!islogin" > <a class="navbar-brand username "> {{username.first_name +" "+ username.last_name}}, </a></li>
+            <li *ngIf="!islogin"><a class="navbar-brand"(click)="logout()">Logout</a></li>
+      </ul>
+
+
+    </div>
+  </div>
+</nav>

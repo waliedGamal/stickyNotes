@@ -1,0 +1,23 @@
+.particle
+{
+  height: 88vh;
+  overflow: hidden !important;
+}
+
+form
+{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  -moz-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  -o-transform: translate(-50%,-50%);
+  width: 50%;
+
+  .btn{background-color: rgb(101,103,106);
+    border-color:rgb(101,103,106)}
+}
+
+

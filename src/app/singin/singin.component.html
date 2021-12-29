@@ -1,0 +1,32 @@
+<div class="particle">
+
+  <div class=" container py-5">
+
+    <form [formGroup]="singinForm" (ngSubmit)="singinFormSubmit(singinForm)">
+
+      <div class="col-md-12 mt-3 ">
+        <input formControlName="email" [class.is-valid]="singinForm.get('email')?.valid && singinForm.get('email')?.touched"
+        [class.is-invalid]="singinForm.get('email')?.invalid && singinForm.get('email')?.touched" type="email" placeholder="Enter Email" class="form-control" >
+          <div *ngIf="singinForm.get('email')?.errors && singinForm.get('email')?.touched"   >
+            <p class="text-danger" *ngIf="singinForm.get('email')?.errors?.required"> email is Required</p>
+            <p class="text-danger" *ngIf="singinForm.get('email')?.errors?.email">  email is Invaid</p>
+          </div>
+      </div>
+
+      <div class="col-md-12 mt-3 ">
+        <input formControlName="password" [class.is-valid]="singinForm.get('password')?.valid && singinForm.get('password')?.touched" [class.is-invalid]="singinForm.get('password')?.invalid && singinForm.get('password')?.touched"  type="password" placeholder="Enter Your Password" class="form-control" >
+          <div *ngIf="singinForm.get('password')?.errors && singinForm.get('password')?.touched"   >
+            <p class="text-danger ms-2" *ngIf="singinForm.get('password')?.errors?.required"> password is Required</p>
+          </div>
+          <div *ngIf="error" class="text-danger mt-2"> {{error}} </div>
+      </div>
+
+
+      <button [disabled]="singinForm.invalid" type="submit" class="btn btn-primary form-control mt-4"> singin </button>
+
+    </form>
+  </div>
+
+</div>
+
+

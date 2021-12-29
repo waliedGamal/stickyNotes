@@ -1,0 +1,28 @@
+.notes
+{
+  min-height:200px;
+  background-color: rgb(177, 168, 51);
+  max-width: 300px;
+}
+.notes i
+{
+    cursor: pointer;
+}
+.dropdown-menu li
+{
+  cursor: pointer;
+}
+div
+{
+  word-wrap: break-word;
+}
+.addnote
+{
+  background-color: rgb(177, 168, 51);
+  border-color:rgb(214, 205, 69);
+}
+.btn-info:hover
+{
+  background-color: rgb(231, 221, 78);
+  border-color:rgb(231, 221, 78);
+}
